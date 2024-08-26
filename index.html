@@ -14,7 +14,7 @@
     <title>Chips and Tips</title>
     <style>
       body {
-        padding: 0;
+        padding: 0 !important;
         margin: 0;
         height: 100vh;
         display: flex;
@@ -32,9 +32,18 @@
         justify-content: center;
       }
 
-      .logo img {
-        width: calc(60vw + 20px);
-        height: 60vw;
+      @media (min-width: 768px) {
+        .logo img {
+            width: calc(60vh + 10px);
+            height: 60vh;
+        }
+      }
+
+      @media (max-width: 767px) {
+        .logo img {
+            width: calc(30vh + 10px);
+            height: 30vh;
+        }
       }
 
       h1 {
@@ -42,7 +51,7 @@
         font-optical-sizing: auto;
         font-weight: 900;
         color: #e2bf9f;
-        font-size: 7vw;
+        font-size: 6vw;
         display: flex;
         justify-content: center;
         margin: 0;
